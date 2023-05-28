@@ -1,4 +1,4 @@
-#!/bin/sh                        #!/bin/sh
+#!/bin/sh
 
 hostname=$(uci get system.@system[0].hostname)
 wan_ip=$(. /lib/functions/network.sh; network_find_wan NET_IF; network_get_ipaddr NET_ADDR "${NET_IF}"; echo "${NET_ADDR}")
