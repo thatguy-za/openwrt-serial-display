@@ -2,6 +2,8 @@
 #include <Wire.h>
 #include <Adafruit_SSD1306.h>
 
+#include <ESP8266WiFi.h> // To disable wifi for ESP8266
+
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 32 // OLED display height, in pixels
 #define OLED_RESET     1 
@@ -10,6 +12,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 void setup() {
   Serial.begin(115200);
 
+  WiFi.mode(WIFI_OFF); // Disable wifi for ESP8266
+  
   Wire.begin(2,0);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
