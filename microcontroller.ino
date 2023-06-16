@@ -17,6 +17,8 @@ void setup() {
   Wire.begin(2,0);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
+  display.dim(true); //(optional) dim the display  
+  
   display.setTextSize(1);      // Normal 1:1 pixel scale
   display.setTextColor(SSD1306_WHITE); // Draw white text
 
